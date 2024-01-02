@@ -12,10 +12,20 @@ const Sidebar = () => {
     { name: "Dashboard", link: "/dashboard", icon: MdOutlineDashboard },
     { name: "Profile", link: "/profile", icon: AiOutlineUser },
     { name: "Messages", link: "/messages", icon: FiMessageSquare },
-    { name: "Analytics", link: "/analytics", icon: TbReportAnalytics, margin: true },
+    {
+      name: "Analytics",
+      link: "/analytics",
+      icon: TbReportAnalytics,
+      margin: true,
+    },
     { name: "Resources", link: "/resources", icon: FiFolder },
     { name: "Explore", link: "/explore", icon: FiShoppingCart },
-    { name: "Investors", link: "/investors", icon: AiOutlineHeart, margin: true },
+    {
+      name: "Investors",
+      link: "/investors",
+      icon: AiOutlineHeart,
+      margin: true,
+    },
     { name: "Settings", link: "/settings", icon: RiSettings4Line },
   ];
   const [open, setOpen] = useState(true);
@@ -63,9 +73,6 @@ const Sidebar = () => {
             </Link>
           ))}
         </div>
-      </div>
-      <div className="m-3 text-xl text-gray-900 font-semibold">
-        growMore
       </div>
     </section>
   );
