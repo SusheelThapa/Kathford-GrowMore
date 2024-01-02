@@ -26,7 +26,7 @@ const Login = () => {
     login(data)
       .then(() => {
         console.log("Login Successful");
-        navigate("/");
+        navigate("/dashboard");
       })
       .catch((error) => {
         console.log(error);
