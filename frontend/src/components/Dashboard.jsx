@@ -1,7 +1,10 @@
 import React from "react";
+import ProfileInfoFill from "./ProfileInfoFill";
 
 const Dashboard = () => {
-  return <>This is dashboard</>;
+  return (<>
+    <ProfileInfoFill/>
+  </>);
 };
 
 export default Dashboard;
