@@ -35,7 +35,7 @@ const ProfileInfoFill = () => {
         e.preventDefault();
         // Handle form submission logic here
         console.log(formData);
-        
+
         setFormData({
             name: '',
             industry: '',
@@ -92,8 +92,11 @@ const ProfileInfoFill = () => {
                     required
                 >
                     {/* Add options for industries */}
-                    <option value="">Select Industry</option>
-                    <option value="technology">Technology</option>
+                    <option value="Agriculture">Agriculture</option>
+                    <option value="Education">Education</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Health">Health</option>
+                    <option value="IT">IT</option>
                     {/* Add more options as needed */}
                 </select>
             </div>
@@ -159,18 +162,25 @@ const ProfileInfoFill = () => {
             </div>
 
             <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-600">
-                    Product Status
+                <label htmlFor="industry" className="block text-sm font-medium text-gray-600">
+                Product Status
                 </label>
-                <input
-                    type="text"
+                <select
                     id="productStatus"
                     name="productStatus"
                     value={formData.productStatus}
                     onChange={handleInputChange}
                     className="mt-1 p-2 w-full border rounded-md"
                     required
-                />
+                >
+                    {/* Add options for industries */}
+                    <option value="Private">Private</option>
+                    <option value="Public Beta">Public Beta</option>
+                    <option value="Launched">Launched</option>
+                    <option value="Acquired">Acquired</option>
+                    <option value="Others">Others</option>
+                    {/* Add more options as needed */}
+                </select>
             </div>
 
             <div className="mb-4">
@@ -289,8 +299,9 @@ const ProfileInfoFill = () => {
                     required
                 >
                     {/* Add options for industries */}
-                    <option value="">Looking For</option>
-                    <option value="technology">Technology</option>
+                    <option value="Co-Founder">Co-Founder</option>
+                    <option value="Investor">Investor</option>
+                    <option value="Other">Other</option>
                     {/* Add more options as needed */}
                 </select>
             </div>
