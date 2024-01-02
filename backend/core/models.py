@@ -100,12 +100,12 @@ class StartupProfile(models.Model):
     contact_email = models.CharField(max_length=255)
     team_size = models.IntegerField()
     product_status = models.CharField(max_length=64, choices=PRODUCT_STATUS_CHOICES)
-    website_url = models.CharField(max_length=255)
-    linkedin_url = models.CharField(max_length=255)
+    website_url = models.CharField(max_length=255, null=True, blank=True)
+    linkedin_url = models.CharField(max_length=255, null=True, blank=True)
 
-    logo = models.FileField(upload_to='core/startups/logo')
-    patent = models.FileField(upload_to='core/startups/patent')
-    registeration_info = models.FileField(upload_to='core/startups/registeration')
+    logo = models.FileField(upload_to='core/startups/logo', null=True, blank=True)
+    patent = models.FileField(upload_to='core/startups/patent', null=True, blank=True)
+    registeration_info = models.FileField(upload_to='core/startups/registeration', null=True, blank=True)
 
     description = models.TextField()
     pitch_to_investor = models.TextField()
@@ -126,3 +126,18 @@ class FoundersInfo(models.Model):
 
     def __str__(self):
         return self.name
+    
+
+class VentureCaptialInfo(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=255)
+    email = models.CharField(max_length=255)
+    address = models.CharField(max_length=255)
+    phone_no = models.CharField(max_length=255)
+    profile_pic = models.FileField(upload_to='core/vcs/profile_pic')
+    pan = models.FileField(upload_to='core/vcs/pan')
+    linkedin_url = models.CharField(max_length=255, null=True, blank=True)
+    facebook_url = models.CharField(max_length=255, null=True, blank=True)
+    twitter_url = models.CharField(max_length=255, null=True, blank=True)
+    website = models.CharField(max_length=255, null=True, blank=True)
+    description = models.TextField()

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import User, StartupProfile, FoundersInfo
+from .models import User, StartupProfile, FoundersInfo, VentureCaptialInfo
 
 
 class UserRegistrationSerializer(serializers.ModelSerializer):
@@ -45,3 +45,10 @@ class StartupProfileSerializer(serializers.ModelSerializer):
 			FoundersInfo.objects.create(startup=startup, **founderi)
         
 		return startup
+
+
+class VentureCapitalSerializer(serializers.ModelSerializer):
+      class Meta:
+            model = VentureCaptialInfo
+            fields = ['id', 'user', 'name', 'email', 'address', 'phone_no', 'profile_pic', 'pan', 'linkedin_url', 'facebook_url', 'twitter_url', 'website', 'description']
+             
