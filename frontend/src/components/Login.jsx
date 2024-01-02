@@ -1,80 +1,99 @@
-const Register = () => {
-    return (
-      <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <img
-            className="mx-auto h-10 w-auto"
-            src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-            alt="Your Company"
-          />
-          <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-            Sign in to your account
-          </h2>
+import { Link } from "react-router-dom";
+
+import { useRef } from "react";
+
+import { useNavigate } from "react-router-dom";
+
+const Login = () => {
+  const email = useRef("");
+  const password = useRef("");
+
+  const navigate = useNavigate();
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    const data = {
+      email: email.current.value,
+      password: password.current.value,
+    };
+
+    // API Call
+    await console.log(data);
+
+    // Redirection
+    navigate("/");
+  };
+  return (
+    <div>
+      <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
+        <div>
+          <a href="/">
+            <h3 className="text-4xl font-bold text-green-600">growMore</h3>
+          </a>
         </div>
-  
-        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form className="space-y-6" action="#" method="POST">
-            <div>
+        <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-lg sm:rounded-lg">
+          <form>
+            <div className="mt-4">
               <label
-                htmlFor=""
-                className="block text-sm font-medium leading-6 text-gray-900"
+                htmlFor="email"
+                className="block text-lg font-medium text-gray-700"
               >
-                Email address
+                Email
               </label>
-              <div className="mt-2">
+              <div className="flex flex-col items-start">
                 <input
-                  id="email"
-                  name="email"
                   type="email"
-                  autoComplete="email"
-                  required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  ref={email}
+                  className="block w-full mt-1 py-1 px-3 border-none 
+                text-md rounded-lg shadow-sm focus:outline-green-700
+                bg-gray-100"
                 />
               </div>
             </div>
-  
-            <div>
-              <div className="flex items-center justify-between">
-                <label
-                  htmlFor="password"
-                  className="block text-sm font-medium leading-6 text-gray-900"
-                >
-                  Password
-                </label>
-                <div className="text-sm">
-                  <a
-                    href="#"
-                    className="font-semibold text-indigo-600 hover:text-indigo-500"
-                  >
-                    Forgot password?
-                  </a>
-                </div>
-              </div>
-              <div className="mt-2">
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  autoComplete="current-password"
-                  required
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                />
-              </div>
-            </div>
-  
-            <div>
-              <button
-                type="submit"
-                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+
+            <div className="mt-4">
+              <label
+                htmlFor="password"
+                className="block text-lg font-medium text-gray-700"
               >
-                Register
+                Password
+              </label>
+              <div className="flex flex-col items-start">
+                <input
+                  type="password"
+                  ref={password}
+                  className="block w-full mt-1 py-1 px-3 border-none 
+                text-md rounded-lg shadow-sm focus:outline-green-700
+                bg-gray-100"
+                />
+              </div>
+            </div>
+
+            <a href="#" className="text-xs text-green-600 hover:underline">
+              Forget Password?
+            </a>
+            <div className="flex items-center mt-4">
+              <button
+                className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-green-700 rounded-md hover:bg-green-600 focus:outline-none focus:bg-green-600"
+                onClick={handleLogin}
+              >
+                Log in
               </button>
             </div>
           </form>
+          <div className="mt-4 text-grey-600">
+            Create an account?{" "}
+            <span>
+              <Link className="text-green-600 hover:underline" to="/login">
+                Register
+              </Link>
+            </span>
+          </div>
         </div>
       </div>
-    );
-  };
-  
-  export default Register;
-  
+    </div>
+  );
+};
+
+export default Login;
