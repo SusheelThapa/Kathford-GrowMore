@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { register } from "../api/register";
 
 const Register = () => {
   const name = useRef("");
@@ -18,12 +19,18 @@ const Register = () => {
       name: name.current.value,
       email: email.current.value,
       password: password.current.value,
-      accountType: accountType.current.value,
-      confirm_password: confirm_password.current.value,
+      user_type: accountType.current.value,
     };
+    console.log(data);
 
     // API Call
-    await console.log(data);
+    register(data)
+      .then(() => {
+        console.log("Login Successful");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
 
     // Redirection
     navigate("/");
@@ -86,13 +93,13 @@ const Register = () => {
                   text-md rounded-lg shadow-sm focus:outline-green-700
                   bg-gray-100"
                 >
-                  <option className="rounded-lg" value="guest">
+                  <option className="rounded-lg" value="G">
                     Guest
                   </option>
-                  <option className="rounded-lg" value="startup">
+                  <option className="rounded-lg" value="SU">
                     Startup
                   </option>
-                  <option className="rounded-lg" value="venture-capitalist">
+                  <option className="rounded-lg" value="VC">
                     Venture Capitalist
                   </option>
                 </select>
