@@ -3,15 +3,16 @@ import { useState } from 'react';
 
 const InvestorInfoFill = () => {
     const [formData, setFormData] = useState({
+        user:'',
         name: '',
         email: '',
         address: '',
-        phoneNo: '',
-        facebookUrl: '',
-        linkedinUrl: '',
-        profilePic: null,
-        pan: null,
-        twitterUrl: '',
+        phone_no: '',
+        facebook_url: '',
+        linkedin_url: '',
+        // profilePic: null,
+        // pan: null,
+        twitter_url: '',
         website: '',
         description: '',
     });
@@ -31,15 +32,16 @@ const InvestorInfoFill = () => {
         console.log(formData);
 
         setFormData({
+            user:'',
             name: '',
             email: '',
             address: '',
-            phoneNo: '',
-            facebookUrl: '',
-            linkedinUrl: '',
-            profilePic: null,
-            pan: null,
-            twitterUrl: '',
+            phone_no: '',
+            facebook_url: '',
+            linkedin_url: '',
+            // profilePic: null,
+            // pan: null,
+            twitter_url: '',
             website: '',
             description: '',
         })
@@ -92,9 +94,9 @@ const InvestorInfoFill = () => {
                     </label>
                     <input
                         type="text"
-                        id="phoneNo"
-                        name="phoneNo"
-                        value={formData.phoneNo}
+                        id="phone_no"
+                        name="phone_no"
+                        value={formData.phone_no}
                         onChange={handleInputChange}
                         className="mt-1 p-2 w-full border rounded-md"
                         required
@@ -137,9 +139,9 @@ const InvestorInfoFill = () => {
                     </label>
                     <input
                         type="text"
-                        id="linkedinUrl"
-                        name="linkedinUrl"
-                        value={formData.linkedinUrl}
+                        id="linkedin_url"
+                        name="linkedin_url"
+                        value={formData.linkedin_url}
                         onChange={handleInputChange}
                         className="mt-1 p-2 w-full border rounded-md"
 
@@ -152,9 +154,9 @@ const InvestorInfoFill = () => {
                     </label>
                     <input
                         type="text"
-                        id="facebookUrl"
-                        name="facebookUrl"
-                        value={formData.facebookUrl}
+                        id="facebook_url"
+                        name="facebook_url"
+                        value={formData.facebook_url}
                         onChange={handleInputChange}
                         className="mt-1 p-2 w-full border rounded-md"
 
@@ -167,9 +169,9 @@ const InvestorInfoFill = () => {
                     </label>
                     <input
                         type="text"
-                        id="twitterUrl"
-                        name="twitterUrl"
-                        value={formData.twitterUrl}
+                        id="twitter_url"
+                        name="twitter_url"
+                        value={formData.twitter_url}
                         onChange={handleInputChange}
                         className="mt-1 p-2 w-full border rounded-md"
 
@@ -180,7 +182,7 @@ const InvestorInfoFill = () => {
                 {/* ... (Repeat similar structure for other text fields) */}
 
                 {/* File Fields */}
-                <div className="mb-4">
+                {/* <div className="mb-4">
                     <label htmlFor="profilePic" className="block text-sm font-medium text-gray-600">
                         Profile Picture
                     </label>
@@ -191,9 +193,9 @@ const InvestorInfoFill = () => {
                         onChange={handleFileChange}
                         className="mt-1 p-2 w-full border rounded-md"
                     />
-                </div>
+                </div> */}
 
-                <div className="mb-4">
+                {/* <div className="mb-4">
                     <label htmlFor="pan" className="block text-sm font-medium text-gray-600">
                     Pan
                     </label>
@@ -204,7 +206,7 @@ const InvestorInfoFill = () => {
                         onChange={handleFileChange}
                         className="mt-1 p-2 w-full border rounded-md"
                     />
-                </div>
+                </div> */}
 
                 {/* Textarea */}
                 <div className="mb-4">
