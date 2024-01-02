@@ -119,7 +119,7 @@ class StartupProfile(models.Model):
 
 
 class FoundersInfo(models.Model):
-    startup = models.ForeignKey(StartupProfile, related_name="founder", on_delete=models.CASCADE)
+    startup = models.ForeignKey(StartupProfile, related_name="founder", on_delete=models.CASCADE,null=True, blank=True)
     name = models.CharField(max_length=64)
     citizenship = models.FileField(upload_to='core/startups/founderinfo')
 
