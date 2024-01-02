@@ -48,10 +48,9 @@ const Sidebar = () => {
         </div>
         <div className="mt-4 flex flex-col gap-4 relative ">
           {menus?.map((menu, i) => (
-            <div className="hover:text-green-500">
+            <div className="hover:text-green-500" key={i}>
               <Link
                 to={menu?.link}
-                key={i}
                 className={` ${
                   menu?.margin && "mt-5"
                 } group flex items-center text-sm  gap-3.5 font-medium p-2 hover:bg-gray-800 rounded-md`}
