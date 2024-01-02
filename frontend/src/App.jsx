@@ -1,6 +1,5 @@
 
-import React from "react";
-import { Link, BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {  BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./components/Dashboard";
 import Profile from "./components/Profile";
@@ -12,9 +11,6 @@ import Investors from "./components/Investors";
 import Settings from "./components/Settings";
 
 
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
 import LandingPage from "./components/LandingPage";
 import Register from "./components/Register";
 import Login from "./components/Login";
@@ -39,7 +35,6 @@ const App = () => {
           <Route exact path="/settings" element={<Settings />} />
 
           <Route exact path="/" element={<LandingPage />} />
-          <Route exact path="/Home" element={<Home />} />
           <Route exact path="/register" element={<Register />} />
           <Route exact path="/login" element={<Login />} />
 
