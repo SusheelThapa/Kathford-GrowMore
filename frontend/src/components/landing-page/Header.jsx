@@ -4,7 +4,7 @@ import { Button } from "../Button";
 const LandingPageHeader = () => {
   return (
     <div className="hero-header ">
-      <header className="bg-transparent text-white py-4">
+      <header className="bg-black text-white py-4">
         <div className="container mx-auto flex justify-between items-center">
           <div>
             <h1 className="text-4xl font-extrabold">GrowMore</h1>
@@ -49,7 +49,7 @@ const LandingPageHeader = () => {
                 Contact Us
               </li>
               <li className="hover">
-                <Link to="/Home" className="navigation-link">
+                <Link to="/register" className="navigation-link">
                   <Button
                     ButtonType="btn--primary"
                     content="Sign Up"

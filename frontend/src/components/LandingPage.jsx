@@ -7,6 +7,7 @@ import LandingPageContactUs from "./landing-page/ContactUs";
 
 import animationConfig from "../json/particles.json";
 import LandingPageHero from "./landing-page/Hero";
+import LandingPageFooter from "./landing-page/Footer";
 
 const LandingPage = () => {
   return (
@@ -18,6 +19,7 @@ const LandingPage = () => {
       <LandingPageAbout />
       <LandingPageFeature />
       <LandingPageContactUs />
+      <LandingPageFooter />
     </>
   );
 };
