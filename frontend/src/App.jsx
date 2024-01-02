@@ -1,8 +1,17 @@
 import React from 'react'
-
+import { Link, BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from './components/Home';
 const App = () => {
   return (
-    <div className='text-blue-500'>growMore</div>
+    <>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/Home" element={<Home />} />
+        </Routes>
+      </Router>
+    </>
+
   )
 }
 
