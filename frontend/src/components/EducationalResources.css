@@ -1,0 +1,21 @@
+.educational-resources {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.resource-cards {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.section-heading {
+  margin-bottom: 10px;
+  font-size: xx-large;
+  font-weight: bolder;
+}
