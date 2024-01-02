@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "../Button";
+import img_logo from "../../img/logo.png";
+
 
 const LandingPageHeader = () => {
   return (
@@ -7,13 +9,24 @@ const LandingPageHeader = () => {
       <header className="bg-black text-white py-4">
         <div className="container mx-auto flex justify-between items-center">
           <div>
-            <h1 className="text-4xl font-extrabold">GrowMore</h1>
+              <div className="flex flex-row items-center">
+              <img
+                  src={img_logo}
+                  className="h-16 me-3 bg-transparent"
+                  alt="FlowBite Logo"
+                />  
+            <h1 className="text-4xl font-extrabold hover:text-green-500 ">
+
+          GrowMore
+
+            </h1>
+              </div>
             <p className="text-sm">Where Innovation Meets Investment</p>
           </div>
           <nav>
             <ul className="flex space-x-4 text-xl">
               <li
-                className="hover flex items-center"
+                className="hover flex items-center hover:text-green-500 cursor-pointer"
                 onClick={(e) => {
                   e.preventDefault();
                   window.scrollTo({
@@ -25,7 +38,7 @@ const LandingPageHeader = () => {
                 About
               </li>
               <li
-                className="hover flex items-center"
+                className="hover flex items-center hover:text-green-500 cursor-pointer"
                 onClick={(e) => {
                   e.preventDefault();
                   window.scrollTo({
@@ -37,7 +50,7 @@ const LandingPageHeader = () => {
                 Features
               </li>
               <li
-                className="hover flex items-center"
+                className="hover flex items-center hover:text-green-500 cursor-pointer"
                 onClick={(e) => {
                   e.preventDefault();
                   window.scrollTo({
@@ -47,15 +60,6 @@ const LandingPageHeader = () => {
                 }}
               >
                 Contact Us
-              </li>
-              <li className="hover">
-                <Link to="/register" className="navigation-link">
-                  <Button
-                    ButtonType="btn--primary"
-                    content="Sign Up"
-                    ButtonSize="btn--small"
-                  ></Button>
-                </Link>
               </li>
             </ul>
           </nav>

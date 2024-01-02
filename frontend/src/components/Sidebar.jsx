@@ -5,6 +5,7 @@ import { RiSettings4Line } from "react-icons/ri";
 import { TbReportAnalytics } from "react-icons/tb";
 import { AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
 import { FiMessageSquare, FiFolder, FiShoppingCart } from "react-icons/fi";
+import { MdExplore } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
@@ -19,7 +20,7 @@ const Sidebar = () => {
       margin: true,
     },
     { name: "Resources", link: "/resources", icon: FiFolder },
-    { name: "Explore", link: "/explore", icon: FiShoppingCart },
+    { name: "Explore", link: "/explore", icon: MdExplore },
     {
       name: "Investors",
       link: "/investors",
@@ -43,8 +44,10 @@ const Sidebar = () => {
             onClick={() => setOpen(!open)}
           />
         </div>
-        <div className="mt-4 flex flex-col gap-4 relative">
+        <div className="mt-4 flex flex-col gap-4 relative ">
           {menus?.map((menu, i) => (
+            <div className="hover:text-green-500">
+
             <Link
               to={menu?.link}
               key={i}
@@ -71,6 +74,7 @@ const Sidebar = () => {
                 {menu?.name}
               </h2>
             </Link>
+            </div>
           ))}
         </div>
       </div>
