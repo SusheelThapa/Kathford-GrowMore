@@ -2,11 +2,13 @@ from django.contrib.auth import authenticate
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework.generics import ListCreateAPIView, CreateAPIView
+from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.tokens import RefreshToken
 
 from .renderers import UserRenderer
-from .models import User
-from .serializers import UserRegistrationSerializer, UserLoginSerializer
+from .models import User, StartupProfile, VentureCaptialInfo
+from .serializers import UserRegistrationSerializer, UserLoginSerializer, StartupProfileSerializer, UserProfileSerializer, VentureCapitalSerializer
 
 
 # Generate Token Manually
@@ -40,6 +42,32 @@ class UserLoginView(APIView):
         user = authenticate(email=email, password=password)
         if user is not None:
             token = get_tokens_for_user(user)
-            return Response({'token':token, 'msg':'Login Success'}, status=status.HTTP_200_OK)
+            serializer = UserProfileSerializer(user)
+            return Response({'token':token, 'info':serializer.data}, status=status.HTTP_200_OK)
         else:
             return Response({'errors':{'non_field_errors':['Email or Password is not Valid']}}, status=status.HTTP_404_NOT_FOUND)
+
+
+
+# class StartupProfileView(ListCreateAPIView):
+#     renderer_classes = [UserRenderer]
+#     serializer_class = [StartupProfileSerializer]
+#     permission_classes = [IsAuthenticated]
+
+#     def get_queryset(self):
+#         return StartupProfile.objects.prefetch_related('founderinfo_set').all().filter(user=self.request.user)
+
+
+class StartupProfileView(ListCreateAPIView):
+    permission_classes = [IsAuthenticated]
+    serializer_class = StartupProfileSerializer
+
+    def get_queryset(self):
+        return StartupProfile.objects.prefetch_related('founder').all().filter(user=self.request.user)
+
+class VentureCapitalProfileView(ListCreateAPIView):
+    permission_classes = [IsAuthenticated]
+    serializer_class = VentureCapitalSerializer
+
+    def get_queryset(self):
+        return VentureCaptialInfo.objects.all().filter(user=self.request.user)
