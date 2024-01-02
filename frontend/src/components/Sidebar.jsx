@@ -11,8 +11,8 @@ const Sidebar = () => {
   const menus = [
     { name: "Dashboard", link: "/dashboard", icon: MdOutlineDashboard },
     { name: "Profile", link: "/profile", icon: AiOutlineUser },
-    { name: "messages", link: "/messages", icon: FiMessageSquare },
-    { name: "analytics", link: "/analytics", icon: TbReportAnalytics, margin: true },
+    { name: "Messages", link: "/messages", icon: FiMessageSquare },
+    { name: "Analytics", link: "/analytics", icon: TbReportAnalytics, margin: true },
     { name: "Resources", link: "/resources", icon: FiFolder },
     { name: "Explore", link: "/explore", icon: FiShoppingCart },
     { name: "Investors", link: "/investors", icon: AiOutlineHeart, margin: true },

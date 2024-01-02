@@ -4,4 +4,4 @@ const Analytics = () => {
   return <>This is Analytics</>;
 };
 
-export default Analytics;Analytics
+export default Analytics;
