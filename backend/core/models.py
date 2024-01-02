@@ -4,13 +4,14 @@ from django.db import models
 # Create your models here.
 
 class UserManager(BaseUserManager):
-    def create_user(self, email, name, password=None):
+    def create_user(self, email, name, user_type, password=None):
         if not email:
             raise ValueError('User must have an email address')
 
         user = self.model(
             email=self.normalize_email(email),
             name=name,
+            user_type=user_type
         )
 
         user.set_password(password)
@@ -38,7 +39,9 @@ class User(AbstractUser):
         (GUEST_USR, "Guest")
     )
 
+    username = None
     email = models.EmailField(verbose_name='Email', max_length=255, unique=True)
+    name = models.CharField(max_length=255)
     user_type = models.CharField(max_length=2, choices=USER_CHOICES)
 
     objects = UserManager()
