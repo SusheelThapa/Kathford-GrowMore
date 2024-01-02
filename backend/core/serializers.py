@@ -31,7 +31,7 @@ class FounderInfoSerializer(serializers.ModelSerializer):
         fields = ['name','citizenship']
 
 class StartupProfileSerializer(serializers.ModelSerializer):
-	founder = FounderInfoSerializer(many=True)
+	founder = FounderInfoSerializer(many=True,required=False)
 	class Meta:
 		model = StartupProfile
 		fields = ['id', 'user', 'name', 'industry', 'address', 'contact_no', 'contact_email', 'team_size','product_status', 'website_url', 'linkedin_url', 'logo', 'patent',
