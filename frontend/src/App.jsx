@@ -1,5 +1,3 @@
-
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import LandingPage from "./components/LandingPage";
@@ -18,7 +16,7 @@ const App = () => {
           <Route exact path="/login" element={<Login />} />
         </Routes>
       </Router>
-      <Footer/>
+      <Footer />
     </>
   );
 };
