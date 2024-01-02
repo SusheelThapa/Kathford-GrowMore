@@ -4,6 +4,8 @@ import { useRef } from "react";
 
 import { useNavigate } from "react-router-dom";
 
+import { login } from "../api/login";
+
 const Login = () => {
   const email = useRef("");
   const password = useRef("");
@@ -19,10 +21,15 @@ const Login = () => {
     };
 
     // API Call
-    await console.log(data);
-
-    // Redirection
-    navigate("/");
+    login(data)
+      .then(() => {
+        console.log("Login Successful");
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+        navigate("/login");
+      });
   };
   return (
     <div>
@@ -85,7 +92,10 @@ const Login = () => {
           <div className="mt-4 text-grey-600">
             Create an account?{" "}
             <span>
-              <Link className="text-green-600 hover:underline" to="/login">
+              <Link
+                to="/register"
+                className="text-green-600 hover:underline"
+              >
                 Register
               </Link>
             </span>
