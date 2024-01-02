@@ -37,7 +37,7 @@ const InvestorInfoFill = () => {
             phoneNo: '',
             facebookUrl: '',
             linkedinUrl: '',
-            logo: null,
+            profilePic: null,
             pan: null,
             twitterUrl: '',
             website: '',
@@ -51,7 +51,7 @@ const InvestorInfoFill = () => {
                 e.preventDefault();
                 handleSubmit(e);
             }} className="w-3/4 mx-auto mt-8 p-4 bg-white shadow-md rounded-md">
-                <h2 className="text-2xl font-bold mb-4">Venture Form</h2>
+                <h2 className="text-2xl font-bold mb-4">Investor Information Fill</h2>
 
                 {/* Text Fields */}
                 <div className="mb-4">
@@ -70,27 +70,6 @@ const InvestorInfoFill = () => {
                 </div>
 
                 {/* Dropdown */}
-                <div className="mb-4">
-                    <label htmlFor="industry" className="block text-sm font-medium text-gray-600">
-                        Industry
-                    </label>
-                    <select
-                        id="industry"
-                        name="industry"
-                        value={formData.industry}
-                        onChange={handleInputChange}
-                        className="mt-1 p-2 w-full border rounded-md"
-                        required
-                    >
-                        {/* Add options for industries */}
-                        <option value="Agriculture">Agriculture</option>
-                        <option value="Education">Education</option>
-                        <option value="Finance">Finance</option>
-                        <option value="Health">Health</option>
-                        <option value="IT">IT</option>
-                        {/* Add more options as needed */}
-                    </select>
-                </div>
 
                 <div className="mb-4">
                     <label className="block text-sm font-medium text-gray-600">
@@ -139,50 +118,13 @@ const InvestorInfoFill = () => {
 
                 <div className="mb-4">
                     <label className="block text-sm font-medium text-gray-600">
-                        Team Size
-                    </label>
-                    <input
-                        type="text"
-                        id="teamSize"
-                        name="teamSize"
-                        value={formData.teamSize}
-                        onChange={handleInputChange}
-                        className="mt-1 p-2 w-full border rounded-md"
-                        required
-                    />
-                </div>
-
-                <div className="mb-4">
-                    <label htmlFor="industry" className="block text-sm font-medium text-gray-600">
-                        Product Status
-                    </label>
-                    <select
-                        id="productStatus"
-                        name="productStatus"
-                        value={formData.productStatus}
-                        onChange={handleInputChange}
-                        className="mt-1 p-2 w-full border rounded-md"
-                        required
-                    >
-                        {/* Add options for industries */}
-                        <option value="Private">Private</option>
-                        <option value="Public Beta">Public Beta</option>
-                        <option value="Launched">Launched</option>
-                        <option value="Acquired">Acquired</option>
-                        <option value="Others">Others</option>
-                        {/* Add more options as needed */}
-                    </select>
-                </div>
-
-                <div className="mb-4">
-                    <label className="block text-sm font-medium text-gray-600">
                         Website Url
                     </label>
                     <input
                         type="text"
-                        id="websiteUrl"
-                        name="websiteUrl"
-                        value={formData.websiteUrl}
+                        id="website"
+                        name="website"
+                        value={formData.website}
                         onChange={handleInputChange}
                         className="mt-1 p-2 w-full border rounded-md"
 
@@ -204,49 +146,65 @@ const InvestorInfoFill = () => {
                     />
                 </div>
 
+                <div className="mb-4">
+                    <label className="block text-sm font-medium text-gray-600">
+                        Facebook Url
+                    </label>
+                    <input
+                        type="text"
+                        id="facebookUrl"
+                        name="facebookUrl"
+                        value={formData.facebookUrl}
+                        onChange={handleInputChange}
+                        className="mt-1 p-2 w-full border rounded-md"
+
+                    />
+                </div>
+
+                <div className="mb-4">
+                    <label className="block text-sm font-medium text-gray-600">
+                        Twitter Url
+                    </label>
+                    <input
+                        type="text"
+                        id="twitterUrl"
+                        name="twitterUrl"
+                        value={formData.twitterUrl}
+                        onChange={handleInputChange}
+                        className="mt-1 p-2 w-full border rounded-md"
+
+                    />
+                </div>
+
                 {/* Other Text Fields */}
                 {/* ... (Repeat similar structure for other text fields) */}
 
                 {/* File Fields */}
                 <div className="mb-4">
-                    <label htmlFor="logo" className="block text-sm font-medium text-gray-600">
-                        Logo
+                    <label htmlFor="profilePic" className="block text-sm font-medium text-gray-600">
+                        Profile Picture
                     </label>
                     <input
                         type="file"
-                        id="logo"
-                        name="logo"
+                        id="profilePic"
+                        name="profilePic"
                         onChange={handleFileChange}
                         className="mt-1 p-2 w-full border rounded-md"
                     />
                 </div>
 
                 <div className="mb-4">
-                    <label htmlFor="patent" className="block text-sm font-medium text-gray-600">
-                        Patent
+                    <label htmlFor="pan" className="block text-sm font-medium text-gray-600">
+                    Pan
                     </label>
                     <input
                         type="file"
-                        id="patent"
-                        name="patent"
+                        id="pan"
+                        name="pan"
                         onChange={handleFileChange}
                         className="mt-1 p-2 w-full border rounded-md"
                     />
                 </div>
-
-                <div className="mb-4">
-                    <label htmlFor="registrationInfo" className="block text-sm font-medium text-gray-600">
-                        Registration Info
-                    </label>
-                    <input
-                        type="file"
-                        id="registrationInfo"
-                        name="registrationInfo"
-                        onChange={handleFileChange}
-                        className="mt-1 p-2 w-full border rounded-md"
-                    />
-                </div>
-
 
                 {/* Textarea */}
                 <div className="mb-4">
@@ -261,40 +219,6 @@ const InvestorInfoFill = () => {
                         className="mt-1 p-2 w-full border rounded-md"
                         rows="4"
                     />
-                </div>
-
-                <div className="mb-4">
-                    <label htmlFor="description" className="block text-sm font-medium text-gray-600">
-                        Pitch To Investor
-                    </label>
-                    <textarea
-                        id="pitchToInvestor"
-                        name="pitchToInvestor"
-                        value={formData.pitchToInvestor}
-                        onChange={handleInputChange}
-                        className="mt-1 p-2 w-full border rounded-md"
-                        rows="4"
-                    />
-                </div>
-
-                <div className="mb-4">
-                    <label htmlFor="industry" className="block text-sm font-medium text-gray-600">
-                        Looking For
-                    </label>
-                    <select
-                        id="lookingFor"
-                        name="lookingFor"
-                        value={formData.lookingFor}
-                        onChange={handleInputChange}
-                        className="mt-1 p-2 w-full border rounded-md"
-                        required
-                    >
-                        {/* Add options for industries */}
-                        <option value="Co-Founder">Co-Founder</option>
-                        <option value="Investor">Investor</option>
-                        <option value="Other">Other</option>
-                        {/* Add more options as needed */}
-                    </select>
                 </div>
 
                 {/* Submit Button */}

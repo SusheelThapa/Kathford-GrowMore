@@ -11,7 +11,7 @@ const App = () => {
     "dashboard",
     "profile",
     "messages",
-    "analytics",
+    "notification",
     "resources",
     "explore",
     "investors",
@@ -46,7 +46,7 @@ const App = () => {
           />
           <Route
             exact
-            path="/analytics"
+            path="/notification"
             element={<Homepage active_page={pages[3]} pages={pages} />}
           />
           <Route
