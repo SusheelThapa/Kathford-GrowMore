@@ -22,6 +22,7 @@ const App = () => {
       <Router>
         <Routes>
           <Route exact path="/" element={<LandingPage />} />
+
           <Route
             exact
             path="/homepage"
@@ -69,6 +70,7 @@ const App = () => {
           />
 
           <Route exact path="/" element={<LandingPage />} />
+
           <Route exact path="/register" element={<Register />} />
           <Route exact path="/login" element={<Login />} />
         </Routes>
