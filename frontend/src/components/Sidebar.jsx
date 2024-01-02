@@ -37,6 +37,7 @@ const Sidebar = () => {
       name: "Notification",
       link: "/notification",
       icon: IoIosNotifications,
+      visible: ["SU", "G", "VC"],
       margin: true,
     },
     {
