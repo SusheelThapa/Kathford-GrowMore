@@ -3,26 +3,24 @@ import PropTypes from "prop-types";
 
 const ResourceCard = ({ title, description, imageUrl, link }) => {
   return (
-    <div className="grid grid-rows-1 ">
-      <div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden md:max-w-2xl">
-        <div className="md:flex">
-          <div className="md:flex-shrink-0">
-            <img
-              className="h-48 w-full object-cover md:w-48"
-              src={imageUrl}
-              alt="Resource Image"
-            />
-          </div>
-          <div className="p-8">
-            <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-              {title}
-            </div>
-            <a href={link} target="_blank" rel="noopener noreferrer">
-              <p className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">
-                {description}
-              </p>
-            </a>
-          </div>
+    <div className="max-w-sm mx-auto bg-white rounded-xl overflow-hidden shadow-lg">
+      <img
+        className="w-full h-48 object-cover object-center"
+        src={imageUrl}
+        alt="Resource Image"
+      />
+      <div className="p-6">
+        <div className="font-bold text-xl mb-2">{title}</div>
+        <p className="text-gray-700 text-base">{description}</p>
+        <div className="mt-4">
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-indigo-500 hover:underline"
+          >
+            Learn more
+          </a>
         </div>
       </div>
     </div>

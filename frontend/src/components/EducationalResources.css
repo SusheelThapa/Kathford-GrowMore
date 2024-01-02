@@ -19,3 +19,7 @@
   font-size: xx-large;
   font-weight: bolder;
 }
+
+.educational-resources {
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+}
