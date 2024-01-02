@@ -5,6 +5,7 @@ import { RiSettings4Line } from "react-icons/ri";
 import { TbReportAnalytics } from "react-icons/tb";
 import { AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
 import { FiMessageSquare, FiFolder, FiShoppingCart } from "react-icons/fi";
+import { MdSubscriptions } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
@@ -26,7 +27,9 @@ const Sidebar = () => {
       icon: AiOutlineHeart,
       margin: true,
     },
+    { name: 'Subscribe', link: "/subscribe", icon: MdSubscriptions},
     { name: "Settings", link: "/settings", icon: RiSettings4Line },
+    
   ];
   const [open, setOpen] = useState(true);
   return (

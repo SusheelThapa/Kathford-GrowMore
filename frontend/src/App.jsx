@@ -15,9 +15,10 @@ const App = () => {
     "resources",
     "explore",
     "investors",
+    "subscribe",
     "settings",
   ];
-  return (
+  return (  
     <>
       <Router>
         <Routes>
@@ -65,8 +66,13 @@ const App = () => {
           />
           <Route
             exact
-            path="/settings"
+            path="/subscribe"
             element={<Homepage active_page={pages[7]} pages={pages} />}
+          />
+          <Route
+            exact
+            path="/settings"
+            element={<Homepage active_page={pages[8]} pages={pages} />}
           />
 
           <Route exact path="/" element={<LandingPage />} />
