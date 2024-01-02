@@ -44,8 +44,10 @@ const Sidebar = () => {
             onClick={() => setOpen(!open)}
           />
         </div>
-        <div className="mt-4 flex flex-col gap-4 relative">
+        <div className="mt-4 flex flex-col gap-4 relative ">
           {menus?.map((menu, i) => (
+            <div className="hover:text-green-500">
+
             <Link
               to={menu?.link}
               key={i}
@@ -72,6 +74,7 @@ const Sidebar = () => {
                 {menu?.name}
               </h2>
             </Link>
+            </div>
           ))}
         </div>
       </div>

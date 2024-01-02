@@ -7,13 +7,16 @@ const LandingPageHeader = () => {
       <header className="bg-black text-white py-4">
         <div className="container mx-auto flex justify-between items-center">
           <div>
-            <h1 className="text-4xl font-extrabold">GrowMore</h1>
+            <h1 className="text-4xl font-extrabold hover:text-green-500 ">
+            GrowMore
+
+            </h1>
             <p className="text-sm">Where Innovation Meets Investment</p>
           </div>
           <nav>
             <ul className="flex space-x-4 text-xl">
               <li
-                className="hover flex items-center"
+                className="hover flex items-center hover:text-green-500 cursor-pointer"
                 onClick={(e) => {
                   e.preventDefault();
                   window.scrollTo({
@@ -25,7 +28,7 @@ const LandingPageHeader = () => {
                 About
               </li>
               <li
-                className="hover flex items-center"
+                className="hover flex items-center hover:text-green-500 cursor-pointer"
                 onClick={(e) => {
                   e.preventDefault();
                   window.scrollTo({
@@ -37,7 +40,7 @@ const LandingPageHeader = () => {
                 Features
               </li>
               <li
-                className="hover flex items-center"
+                className="hover flex items-center hover:text-green-500 cursor-pointer"
                 onClick={(e) => {
                   e.preventDefault();
                   window.scrollTo({
