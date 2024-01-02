@@ -1,15 +1,12 @@
-// EducationalResources.js
-
-import React from "react";
 import ResourceCard from "./ResourceCard";
 import "./EducationalResources.css";
 
-const EducationalResources = () => {
+const Resources = () => {
   return (
     <div className="educational-resources mt-10">
       <div className="section">
         <h1 className="section-heading">Guides</h1>
-        <div className="resource-cards flex">
+        <div className="resource-cards flex gap-10 mx-10">
           <ResourceCard
             title="No/Less Investment Startup"
             description="Creating a startup from Scratch!"
@@ -46,7 +43,7 @@ const EducationalResources = () => {
 
       <div className="section">
         <h1 className="section-heading">Blog</h1>
-        <div className="resource-cards flex">
+        <div className="resource-cards flex gap-10 mx-10">
           <ResourceCard
             title="Art of Pitching"
             description="Blogs to learn the art of Pitching"
@@ -84,7 +81,7 @@ const EducationalResources = () => {
       <div className="section">
         <h1 className="section-heading">Videos</h1>
         <div className="resource-cards flex ml-2">
-          <div className="ml-1 flex">
+          <div className=" flex gap-10 mx-10 mb-10">
             <ResourceCard
               title="BMC Workshop"
               description="Learn to make BMC for startups"
@@ -122,4 +119,4 @@ const EducationalResources = () => {
   );
 };
 
-export default EducationalResources;
+export default Resources;
