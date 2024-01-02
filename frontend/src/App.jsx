@@ -1,18 +1,18 @@
-import React from 'react'
-import { Link, BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from './components/Home';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import LandingPage from "./components/LandingPage";
+
 const App = () => {
   return (
     <>
       <Router>
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<LandingPage />} />
           <Route exact path="/Home" element={<Home />} />
         </Routes>
       </Router>
     </>
+  );
+};
 
-  )
-}
-
-export default App
+export default App;
