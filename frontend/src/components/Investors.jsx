@@ -29,17 +29,17 @@ const Investors = () => {
         Find Investors
       </header>
       <hr className="mx-auto w-full  border-gray-500 mb-10" />
-      <div className="grid gap-8 mx-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-7">
+      <div className="grid gap-8 mx-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
         {investorInfo.map((investor, index) => (
           <div key={index} className="h-auto">
-            <a href="#" className="flex flex-col items-center h-80 bg-white border-2 border-gray-200 shadow-md rounded-md hover:bg-gray-100 dark:border-black dark:bg-gray-800 dark:hover:bg-gray-700">
+            <a href="#" className="flex flex-col items-center h-80  shadow-md rounded-md   border-green-50  bg-green-900  hover:bg-green-700">
               {/* Replace 'img_user' with the actual image URL or use a default image */}
               <img className="object-cover w-full rounded-t-lg md:h-48 md:w-full md:rounded-none md:rounded-t-none" src={img_user} alt="" />
               <div className="flex flex-col justify-between p-4 leading-normal">
-                <h5 className="mb-2 text-lg md:text-xl lg:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                <h5 className="mb-2 text-lg md:text-xl lg:text-2xl font-bold tracking-tight  text-white">
                   {investor.Name}
                 </h5>
-                <p className="mb-3 text-sm md:text-base font-normal text-gray-700 dark:text-gray-400">
+                <p className="mb-3 text-sm md:text-base font-normal   text-gray-300">
                   Expertise: {investor.Expertise}
                 </p>
               </div>

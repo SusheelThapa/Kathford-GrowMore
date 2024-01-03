@@ -4,7 +4,7 @@ const Chat = ({ messages }) => {
       {messages.map((message, index) => {
         return (
           <div key={index}>
-            <div className="flex flex-col  w-3/4  leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-e-xl rounded-es-xl dark:bg-gray-600 hover:bg-gray-700">
+            <div className="flex flex-col  w-3/4  leading-1.5 p-4 border-gray-200 bg-white rounded-e-xl rounded-es-xl dark:bg-green-900 hover:bg-gray-300">
               <div className="flex items-center space-x-2 rtl:space-x-reverse">
                 <span className="text-sm font-semibold text-gray-900 dark:text-white">
                   {message.username}
