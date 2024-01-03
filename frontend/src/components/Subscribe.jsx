@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Subscribe = () => {
   return (
     <section
-      className="w-screen"
+      className="w-screen m-20"
       style={{
         textAlign: "center",
         display: "flex",
@@ -21,7 +21,7 @@ const Subscribe = () => {
           borderRadius: "10px",
           boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.1)",
           padding: "40px",
-          width: "70%",
+          width: "60%",
           maxWidth: "600px",
         }}
       >

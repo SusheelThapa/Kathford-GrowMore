@@ -1,8 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
 
-import khaltiLogo from "../img/khalti.svg"
-function Form() {
+import khaltiLogo from "../img/khalti.svg";
+
+const Form = () => {
   const [amount, setAmount] = useState("1000");
   const [returnUrl, setReturnUrl] = useState("http://localhost:5173/dashboard");
 
@@ -33,7 +34,7 @@ function Form() {
   return (
     <div className="app-container flex justify-center items-center h-lvh flex-col">
       <div>
-        <img src={khaltiLogo} alt="Logo of kahlti" className="w-5/6 h-5/6" />
+        <img src={khaltiLogo} alt="Logo of khalti" className="w-5/6 h-5/6" />
       </div>
       <form
         onSubmit={handleSubmit}
@@ -67,6 +68,6 @@ function Form() {
       </form>
     </div>
   );
-}
+};
 
 export default Form;
