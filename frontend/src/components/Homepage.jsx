@@ -6,7 +6,6 @@ import Messages from "./Messages";
 import Notification from "./Notification";
 import Resources from "./Resources";
 import Explore from "./Explore";
-import Settings from "./Settings";
 import Investors from "./Investors";
 import GrowAI from "./GrowAI";
 

@@ -8,7 +8,7 @@ const LandingPageHeader = () => {
     <div className="hero-header ">
       <header className="bg-black text-white py-4">
         <div className="container mx-auto flex justify-between items-center">
-          <div>
+          <Link to="/">
               <div className="flex flex-row items-center">
               <img
                   src={img_logo}
@@ -22,7 +22,7 @@ const LandingPageHeader = () => {
             </h1>
               </div>
             <p className="text-sm">Where Innovation Meets Investment</p>
-          </div>
+          </Link>
           <nav>
             <ul className="flex space-x-4 text-xl">
               <li
