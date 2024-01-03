@@ -1,4 +1,6 @@
 import img_logo from "../../img/logo.png";
+import { Link } from "react-router-dom";
+
 const LandingPageFooter = () => {
   return (
     <>
@@ -7,35 +9,35 @@ const LandingPageFooter = () => {
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
 
-                <img
-                  src={img_logo}
-                  className="h-16 me-3 bg-transparent"
-                  alt="FlowBite Logo"
-                />
+              <img
+                src={img_logo}
+                className="h-16 me-3 bg-transparent"
+                alt="FlowBite Logo"
+              />
 
-                <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                  GrowMore
-                </span>
+              <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                GrowMore
+              </span>
 
             </div>
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                  Resources
+                  <Link to="/resources">
+
+                    Resources
+                  </Link>
                 </h2>
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
                   <li className="mb-4">
-                    <a href="https://flowbite.com/" className="hover:underline">
-                      Flowbite
-                    </a>
+                  <Link to="/explore">
+                      Explore
+                      </Link>
                   </li>
                   <li>
-                    <a
-                      href="https://tailwindcss.com/"
-                      className="hover:underline"
-                    >
-                      Tailwind CSS
-                    </a>
+                  <Link to="/growAI">
+                      GrowAI
+                      </Link>
                   </li>
                 </ul>
               </div>
@@ -46,7 +48,7 @@ const LandingPageFooter = () => {
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
                   <li className="mb-4">
                     <a
-                      href="https://github.com/themesberg/flowbite"
+                      href="https://github.com/"
                       className="hover:underline "
                     >
                       Github
@@ -54,7 +56,7 @@ const LandingPageFooter = () => {
                   </li>
                   <li>
                     <a
-                      href="https://discord.gg/4eeurUVvTy"
+                      href="https://discord.gg/"
                       className="hover:underline"
                     >
                       Discord

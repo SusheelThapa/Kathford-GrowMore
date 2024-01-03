@@ -24,8 +24,7 @@ const Homepage = ({ active_page, pages }) => {
       {active_page == pages[6] && <Investors />}
       {active_page == pages[7] && <GrowAI />}
       {active_page == pages[8] && <Subscribe />}
-      {active_page == pages[9] && <Settings />}
-      {active_page == pages[10] && <ProfileInfoFill />}
+      {active_page == pages[9] && <ProfileInfoFill />}
     </div>
   );
 };
