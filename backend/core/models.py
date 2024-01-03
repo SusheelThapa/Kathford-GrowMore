@@ -98,7 +98,7 @@ class StartupProfile(models.Model):
     address = models.CharField(max_length=255)
     contact_no = models.CharField(max_length=255)
     contact_email = models.CharField(max_length=255)
-    team_size = models.IntegerField()
+    team_size = models.CharField(max_length=20)
     product_status = models.CharField(max_length=64, choices=PRODUCT_STATUS_CHOICES)
     website_url = models.CharField(max_length=255, null=True, blank=True)
     linkedin_url = models.CharField(max_length=255, null=True, blank=True)

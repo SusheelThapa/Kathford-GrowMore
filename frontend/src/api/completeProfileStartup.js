@@ -1,36 +1,27 @@
 import axios from "axios";
-import { getCookieValue } from "../services/cookie";
+import { getCookieValue, setCookieValue } from "../services/cookie";
 
+import _ from "lodash";
 export const completeProfileStartup = async (details) => {
   console.log(getCookieValue("token"));
 
-  console.log(details);
-  const token = getCookieValue("token");
-
   const { data } = await axios.post(
     "http://localhost:8000/api/user/startup/",
+    details,
     {
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${getCookieValue("token")}`,
         "Content-Type": "application/json",
       },
-    },
-    {
-      user: 1,
-      name: "Susheel Thapa",
-      industry: "Agriculture",
-      address: "Kathmandu",
-      contact_no: "2o3-24",
-      contact_email: "susheel@gmail.com",
-      team_size: 4,
-      product_status: "Public Beta",
-      website_url: "",
-      linkedin_url: "",
-      description: "fertet",
-      pitch_to_investor: "investor",
-      is_verified: "False",
-      looking_for: "Co-founder",
     }
   );
-  console.log(data);
+
+  setCookieValue("industry", _.get(data, "industry"));
+  setCookieValue("address", _.get(data, "address"));
+  setCookieValue("contact_no", _.get(data, "contact_no"));
+  setCookieValue("team_size", _.get(data, "team_size"));
+  setCookieValue("product_status", _.get(data, "product_status"));
+  setCookieValue("description", _.get(data, "description"));
+  setCookieValue("pitch_to_investor", _.get(data, "pitch_to_investor"));
+  setCookieValue("is_verified", _.get(data, "is_verified"));
 };
