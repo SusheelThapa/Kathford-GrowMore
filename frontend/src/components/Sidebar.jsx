@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { MdOutlineDashboard } from "react-icons/md";
-import { RiSettings4Line } from "react-icons/ri";
 import { AiOutlineUser, AiOutlineHeart } from "react-icons/ai";
-import { FiMessageSquare, FiFolder, FiShoppingCart } from "react-icons/fi";
+import { FiMessageSquare, FiFolder } from "react-icons/fi";
+import { FaSignOutAlt } from "react-icons/fa";
 import { MdExplore } from "react-icons/md";
 import { GoCopilot } from "react-icons/go";
 import { Link } from "react-router-dom";
@@ -66,9 +66,9 @@ const Sidebar = () => {
       visible: ["SU", "VC"],
     },
     {
-      name: "Settings",
-      link: "/settings",
-      icon: RiSettings4Line,
+      name: "Signout",
+      link: "/",
+      icon: FaSignOutAlt,
       visible: ["SU", "VC", "G"],
     },
   ];
