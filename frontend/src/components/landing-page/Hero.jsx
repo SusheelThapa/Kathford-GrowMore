@@ -17,7 +17,7 @@ const LandingPageHero = () => {
         More
       </div>
       <div className="bg-transparent pt-6">
-        <Link to="/Home" className="navigation-link">
+        <Link to="/register" className="navigation-link">
           <Button
             ButtonType="btn--outline"
             content="GET STARTED"

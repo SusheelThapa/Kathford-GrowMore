@@ -10,6 +10,7 @@ export const login = async (login_credential) => {
     "http://localhost:8000/api/login/",
     login_credential
   );
+  console.log(_.get(data, "token.access"));
 
   setCookieValue("token", _.get(data, "token.access"));
   setCookieValue("name", _.get(data, "info.name"));

@@ -3,6 +3,8 @@ import { useState } from "react";
 import { getCookieValue } from "../services/cookie";
 import { completeProfileStartup } from "../api/completeProfileStartup";
 
+import { useNavigate } from "react-router-dom";
+
 const ProfileInfoFill = () => {
   const [formData, setFormData] = useState({
     user: getCookieValue("id"),
@@ -21,6 +23,8 @@ const ProfileInfoFill = () => {
     is_verified: false,
   });
 
+  const navigate = useNavigate();
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -37,7 +41,9 @@ const ProfileInfoFill = () => {
     console.log(formData);
 
     // API Call
-    completeProfileStartup(formData)
+    completeProfileStartup(formData).then(() => {
+      navigate("/profile");
+    });
 
     setFormData({
       user: getCookieValue("id"),
