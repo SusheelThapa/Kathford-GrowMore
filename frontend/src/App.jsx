@@ -5,6 +5,7 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 
 import Homepage from "./components/Homepage";
+import Form from "./components/Form";
 
 const App = () => {
   const pages = [
@@ -16,6 +17,7 @@ const App = () => {
     "explore",
     "investors",
     "growAI",
+    "subscribe",
     "completeprofile",
 
   ];
@@ -24,6 +26,7 @@ const App = () => {
       <Router>
         <Routes>
           <Route exact path="/" element={<LandingPage />} />
+          <Route exact path="/form" element={<Form />} />
 
           <Route
             exact
@@ -70,6 +73,11 @@ const App = () => {
             path="/growAI"
             element={<Homepage active_page={pages[7]} pages={pages} />}
           />
+          <Route
+            exact
+            path="/subscribe"
+            element={<Homepage active_page={pages[8]} pages={pages} />}
+          />
 
           <Route exact path="/" element={<LandingPage />} />
 
@@ -78,7 +86,7 @@ const App = () => {
           <Route
             exact
             path="/completeprofile"
-            element={<Homepage active_page={pages[8]} pages={pages} />}
+            element={<Homepage active_page={pages[9]} pages={pages} />}
           />
         </Routes>
       </Router>
