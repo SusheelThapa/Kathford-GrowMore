@@ -9,6 +9,7 @@ import Explore from "./Explore";
 import Settings from "./Settings";
 import Investors from "./Investors";
 import GrowAI from "./GrowAI";
+import ProfileInfoFill from "./ProfileInfoFill";
 
 const Homepage = ({ active_page, pages }) => {
   return (
@@ -23,6 +24,7 @@ const Homepage = ({ active_page, pages }) => {
       {active_page == pages[6] && <Investors />}
       {active_page == pages[7] && <GrowAI />}
       {active_page == pages[8] && <Settings />}
+      {active_page == pages[9] && <ProfileInfoFill />}
     </div>
   );
 };

@@ -3,6 +3,7 @@ import TeamMembersCard from "./TeamMembersCard";
 import { BiSolidMessage } from "react-icons/bi";
 import { getCookieValue } from "../services/cookie";
 import img_logo from "../img/logo.png";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
   const tags = ["Technology", "Startup", "Innovation", "San Francisco"];
@@ -46,6 +47,7 @@ const Profile = () => {
                   </span>
                 ))}
               </div>
+
             </div>
           </div>
           <div className="other-info mt-6">
@@ -70,6 +72,12 @@ const Profile = () => {
             <BiSolidMessage className="mr-2" />
             Message
           </span>
+          <Link to="/completeprofile" className="navigation-link">
+          <span className="bg-red-500 text-white px-4 py-2 rounded-md w-40 mt-6 flex items-center justify-center cursor-pointer hover:bg-red-600 transition duration-300">
+            
+            Update Info
+          </span>
+          </Link>
 
         </div>
       </section>

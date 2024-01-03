@@ -17,6 +17,7 @@ const App = () => {
     "investors",
     "growAI",
     "settings",
+    "completeprofile",
   ];
   return (
     <>
@@ -79,6 +80,11 @@ const App = () => {
 
           <Route exact path="/register" element={<Register />} />
           <Route exact path="/login" element={<Login />} />
+          <Route
+            exact
+            path="/completeprofile"
+            element={<Homepage active_page={pages[9]} pages={pages} />}
+          />
         </Routes>
       </Router>
     </>
