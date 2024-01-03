@@ -8,6 +8,7 @@ import { MdExplore } from "react-icons/md";
 import { GoCopilot } from "react-icons/go";
 import { Link } from "react-router-dom";
 import { IoIosNotifications } from "react-icons/io";
+import { MdSubscriptions } from "react-icons/md";
 
 import { getCookieValue } from "../services/cookie";
 
@@ -63,6 +64,12 @@ const Sidebar = () => {
       name: "growAI",
       link: "/growAI",
       icon: GoCopilot,
+      visible: ["SU", "VC"],
+    },
+    {
+      name: "Subscribe",
+      link: "/subscribe",
+      icon: MdSubscriptions,
       visible: ["SU", "VC"],
     },
     {
