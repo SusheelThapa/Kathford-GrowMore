@@ -53,7 +53,7 @@
 
 ## Demo
 
-We will be uploading the demo soon
+https://github.com/SusheelThapa/growMore/assets/83917129/6b6be26e-6964-4a01-82a0-7e81815accff
 
 ## Installation
 
